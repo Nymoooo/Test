@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/images/flat-logo.svg">
+  <link href="/assets/css/output.css" rel="stylesheet" />
+  <link href="/assets/css/input.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <title>HRPEC</title>
+</head>
+
+<body class="bg-f-white scrollbar-thin scrollbar-thumb-f-blue">
+
+  <header class="">
+    <nav id="navbar"
+      class=" header flex flex-row justify-between tablet:flex tablet:justify-between px-5 py-2 duration-300 delay-200"
+      style="position: fixed;
+                width: 100%;
+                background-color: white;
+                z-index: 100; 
+                ">
+      <div class="flex flex-row">
+        <a href="/index.html"><img class="h-8 me-2 tablet:h-12 desktop:h-16 " src="/assets/images/header-logo.svg"></a>
+      </div>
+      <div class="hidden desktop:flex flex-row items-center">
+        <ul class="flex flex-row font-poppins">
+          <li class="px-2 text-xxs font-bold tablet:text-xs desktop:text-sm tablet:font-bold text-center"><a
+              class="" href="/index.html" target="_self">HOME</a></li>
+
+          <div class="relative flex flex-col z-10">
+            <li
+              class="flex flex-row peer px-2 text-xs tablet:text-xs desktop:text-sm tablet:font-bold font-bold text-center">
+              <a class="hover:text-f-2-blue duration-200" href="/assets/about.html">ABOUT</a><img
+                class="rotate hidden desktop:flex" src="/assets/images/navbar-up-down-button.png">
+            </li>
+            <div class="absolute hidden bg-f-white peer-hover:flex hover:flex flex-col mt-5 -ml-1 w-48">
+              <a class="duration-300 hover:bg-s-blue hover:text-white mx-2 mt-1 mb-1 p-2 text-ssm font-poppins font-bold justify-center"
+                href="/assets/about.html">HRPEC</a>
+              <a class="duration-300 hover:bg-s-blue hover:text-white mx-2 mt-1 mb-1 p-2 text-ssm font-poppins font-bold justify-center"
+                href="/assets/about-the-boards.html">OUR BOARD</a>
+              <a class="duration-300 hover:bg-s-blue hover:text-white mx-2 mt-1 mb-1 p-2 text-ssm font-poppins font-bold justify-center"
+                href="/assets/our-partners-alab.html">OUR PARTNERS</a>
+            </div>
+          </div>
+
+          <li class="px-2 text-xxs tablet:text-xs desktop:text-sm tablet:font-bold font-bold text-center "><a
+              class="hover:text-f-2-blue duration-200" href="/assets/ourwork.html" target="_self">OUR WORK</a></li>
+          <li class="px-2 text-xxs tablet:text-xs desktop:text-sm tablet:font-bold font-bold text-center"><a
+              class="hover:text-f-2-blue duration-200" href="/assets/contactus.html" target="_self">CONTACT US</a></li>
+
+          <div class="relative flex flex-col z-10">
+            <li
+              class="flex flex-row peer px-2 text-xxs tablet:text-xs desktop:text-sm tablet:font-bold font-bold text-center">
+              <a class="hover:text-f-2-blue duration-200" href="/assets/updates.html" target="_self">UPDATES</a>
+              <img class="rotate hidden desktop:flex" src="/assets/images/navbar-up-down-button.png">
+            </li>
+            <div class="absolute hidden bg-f-white peer-hover:flex hover:flex flex-col mt-5 -ml-16 w-36">
+              <a class="duration-300 hover:bg-s-blue hover:text-white mx-2 mt-1 mb-1 p-2 text-ssm font-poppins font-bold justify-center"
+                href="/assets/updates.html">EVENTS<br>PUBLICATIONS</a>
+              <a class="duration-300 hover:bg-s-blue hover:text-white mx-2 mt-1 mb-1 p-2 text-ssm font-poppins font-bold justify-center"
+                href="/assets/updates-statements.html">STATEMENTS</a>
+            </div>
+          </div>
+        </ul>
+        <a class="text-xs text-center font-poppins font-bold tablet:text-xs tablet:font-bold desktop:text-lg text-black hover:text-white"
+          href="/assets/donate.html"><button
+            class="mx-2 justify-center items-center border-2 border-s-blue px-4 py-1 desktop:mx-4 desktop:px-10 desktop:py-2 hover:bg-s-blue hover:border-s-blue duration-200">DONATE</button></a>
+      </div>
+
+      <div class="hidden desktop:hidden tablet:flex flex-row items-center">
+        <ul class="flex flex-row font-poppins justify-end">
+          <li class="px-2 text-xxs font-bold tablet:text-xs tablet:font-bold text-center"><a
+              class=" decoration-f-blue" href="/index.html" target="_self">HOME</a></li>
+
+          <select class="text-xs font-bold w-1/6" name="links" id="" size="1"
+            onchange="window.location.href=this.value;">
+            <option class="text-xs text-center font-semibold" value="">ABOUT</option>
+            <option class="text-xs text-center font-semibold" value="/assets/about.html">HRPEC</option>
+            <option class="text-xs text-center font-semibold" value="/assets/about-the-boards.html">OUR BOARD</option>
+            <option class="text-xs text-center font-semibold" value="/assets/our-partners-alab.html">OUR PARTNERS
+            </option>
+          </select>
+
+          <li class="px-2 text-xxs tablet:text-xs desktop:text-sm tablet:font-bold font-bold text-center "><a
+              class="hover:text-f-2-blue duration-200" href="/assets/ourwork.html" target="_self">OUR WORK</a></li>
+          <li class="px-2 text-xxs tablet:text-xs desktop:text-sm tablet:font-bold font-bold text-center"><a
+              class="hover:text-f-2-blue duration-200" href="/assets/contactus.html" target="_self">CONTACT US</a></li>
+
+          <select class="text-xs font-bold w-1/5 " name="links" id="" size="1"
+            onchange="window.location.href=this.value;">
+            <option class="text-xs text-center font-semibold" value="">UPDATES</option>
+            <option class="text-xs text-center font-semibold" value="/assets/updates.html">EVENTS PUBLICATIONS</option>
+            <option class="text-xs text-center font-semibold" value="/assets/updates-statements.html">STATEMENTS
+            </option>
+          </select>
+        </ul>
+        <a class="text-xs text-center font-poppins font-bold tablet:text-xs tablet:font-bold desktop:text-lg text-black hover:text-white"
+          href="/assets/donate.html"><button
+            class="mx-2 justify-center items-center border-2 border-s-blue px-4 py-1 desktop:mx-4 desktop:px-10 desktop:py-2 hover:bg-s-blue hover:border-s-blue duration-200">DONATE</button></a>
+      </div>
+
+      <div class="tablet:hidden">
+        <button id="menu-btn" class="block hamburger tablet:hidden focus:outline-none">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+
+        <div class="tablet:hidden">
+          <div id="menu"
+            class="absolute flex-col justify-center text-center items-center hidden self-end py-8 mt-4 text-xs space-y-6 font-semibold bg-white phone:w-auto phone:self-center left-6 right-6 drop-shadow-md">
+            <a class="" href="/index.html">HOME</a>
+
+            <select class="" name="links" id="" size="1" onchange="window.location.href=this.value;">
+              <option class="text-xxs text-center font-semibold" value="">ABOUT</option>
+              <option class="text-xxs text-center font-semibold" value="/assets/about.html">HRPEC</option>
+              <option class="text-xxs text-center font-semibold" value="/assets/about-the-boards.html">OUR BOARD
+              </option>
+              <option class="text-xxs text-center font-semibold" value="/assets/our-partners-alab.html">OUR PARTNERS
+              </option>
+            </select>
+
+            <a href="/assets/ourwork.html">OUR WORK</a>
+            <a href="/assets/contactus.html">CONTACT US</a>
+
+            <select class="w-1/2" name="links" id="" size="1" onchange="window.location.href=this.value;">
+              <option class="text-xxs text-center font-semibold" value="">UPDATES</option>
+              <option class="text-xxs text-center font-semibold" value="/assets/updates.html">EVENTS PUBLICATIONS
+              </option>
+              <option class="text-xxs text-center font-semibold" value="/assets/updates-statements.html">STATEMENTS
+              </option>
+            </select>
+            <a class="bg-s-blue px-6 py-2 text-xl text-white" href="/assets/donate.html">DONATE</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="relative w-full bg-[url('/assets/images/about-images/bg5-side-f5f5f5.png')] bg-no-repeat bg-cover">
+    <h1
+      class="z-10 text-f-white font-bold pt-20 pl-2 text-4xl -mb-4 tablet:text-5xl tablet:mb-0 tablet:pl-4 tablet:pt-32 desktop:text-8xl desktop:pl-6 desktop:pt-60">
+      WEBSITE DEVELOPERS</h1>
+  </section>
+
+  <section
+    class="first-in-main-content my-20 phone:mx-4 grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-10">
+
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+        <div
+          class="show-modal1 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+          <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/men.jpg">
+        </div>
+        <div class="pt-4">
+          <h1 class="text-center font-bold text-2xl">Myke Ezekiel U. Narvasa</h1>
+          <h1 class="text-center font-semibold underline">Project Manager</h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal1 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+
+    <div
+    class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+    <div
+    class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-10 ">
+    <h3 class="font-bold text-2xl text-t-blue tablet:text-6xl desktop:text-8xl">Project Manager</h3>
+    <button class="font-extrabold text-t-blue close-modal1 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+    </div>
+    <div
+      class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+      <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/men.jpg">
+      <p class="mb-4 pb-4 border-b-2 border-t-blue">
+        I'm a fourth-year Bachelor of Science in Computer Science student at the University of Caloocan City, Philippines, with solid grasp in programming, website development, and website content writing. My CS journey involves optimizing AI tools and techs like NPM, Vercel, and Git. Embracing new tech fuels my passion, while leading teams using different project development approaches sharpens my confidence and communication strengths.
+        
+        <br><br>
+        Connect with me! Click the social icons below.
+      </p>
+
+    <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+      <a href="https://github.com/Nymoooo" target="_blank"><img
+          class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+          src="/assets/github.svg"></a>
+      <a href="https://www.linkedin.com/in/ezekiel-narvasa-/" target="_blank"><img
+          class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+          src="/assets/li.svg"></a>
+      <a href="https://www.instagram.com/pink.ezborja/" target="_blank"><img
+          class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+          src="/assets/images/footer-images/ig-icon.png"></a>
+      <a href="https://web.facebook.com/BlackSheet007" target="_blank"><img
+          class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+          src="/assets/images/footer-images/fb-icon.png"></a>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+        <div
+          class="show-modal2 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+          <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/jfb.jpg">
+        </div>
+        <div class="pt-4">
+          <h1 class="text-center font-bold text-2xl">John Felix D. Ballon</h1>
+          <h1 class="text-center font-semibold underline">Software Engineer</h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal2 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+    
+      <div
+        class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+        <div
+          class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-10 ">
+          <h3 class="font-bold text-2xl text-t-blue tablet:text-6xl desktop:text-8xl">Software Engineer</h3>
+          <button class="font-extrabold text-t-blue close-modal2 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+        </div>
+        <div
+          class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+          <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/jfb.jpg">
+          <p class="mb-4 pb-4 border-b-2 border-t-blue">
+            I am a fourth-year Bachelor of Science in Computer Science student at the University of Caloocan City, Philippines. My
+            expertise lies
+            in front-end
+            development,
+            and I like crafting amazing user interfaces using Tailwind CSS.
+          </p>
+    
+          <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+            <a href="https://github.com/johnfelixballon" target="_blank"><img
+              class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+              src="/assets/github.svg"></a>
+              <a href="https://www.linkedin.com/in/john-felix-ballon-aaa739232/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/li.svg"></a>
+            <a href="https://www.instagram.com/johnfelixballon/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/ig-icon.png"></a>
+            <a href="https://www.facebook.com/johnfelix.ballon" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/fb-icon.png"></a>
+            <a href="https://twitter.com/ballonjohnfelix" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/xffffff.svg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+        <div
+          class="show-modal3 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+          <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/bas.jpg">
+        </div>
+        <div class="pt-4">
+          <h1 class="text-center font-bold text-2xl">Bruce Adrian C. Samonte</h1>
+          <h1 class="text-center font-semibold underline">UX Developer</h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal3 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+    
+      <div
+        class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+        <div
+          class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-10 ">
+          <h3 class="font-bold text-2xl text-t-blue tablet:text-6xl desktop:text-8xl">UX Developer</h3>
+          <button class="font-extrabold text-t-blue close-modal3 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+        </div>
+        <div
+          class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+          <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/bas.jpg">
+          <p class="mb-4 pb-4 border-b-2 border-t-blue">
+            I am Bruce Adrian Samonte, a dedicated student at the University of Caloocan City taking the bachelors of
+            science in Computer science program. I am passionate about the field of User Experience(UX)
+            development and i am commited to achieving excellence in this area.
+            I am excited to leverage my knowledge and skills to contribute to innovative 
+            and user-friendly digital experiences.
+          </p>
+    
+          <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+            <a href="https://github.com/brcadrian" target="_blank"><img
+              class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+              src="/assets/github.svg"></a>
+              <a href="https://www.linkedin.com/in/samonte-bruce-adrian-c-400ab1233/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/li.svg"></a>
+            <a href="https://www.instagram.com/adrianxyz20/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/ig-icon.png"></a>
+            <a href="https://www.facebook.com/bruce.samonte.20/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/fb-icon.png"></a>
+            <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/xffffff.svg"></a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+        <div
+          class="show-modal4 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+          <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/jll.jpg">
+        </div>
+        <div class="pt-4">
+          <h1 class="text-center font-bold text-2xl">John Leonard M. Leaño</h1>
+          <h1 class="text-center font-semibold underline">UI/Graphics Designer</h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal4 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+    
+      <div
+        class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+        <div
+          class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-8 ">
+          <h3 class="font-bold text-lg text-t-blue tablet:text-4xl desktop:text-6xl">UI/Graphics Designer</h3>
+          <button class="font-extrabold text-t-blue close-modal4 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+        </div>
+        <div
+          class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+          <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/jll.jpg">
+          <p class="mb-4 pb-4 border-b-2 border-t-blue">
+            I am a dedicated 4th-year Computer Science student pursuing a Bachelor of Science degree. With a passion for creativity and technology, I have flourished as a Graphic Designer, Graphic Artist, and UI Designer. My skills extend to Frontend Web Development, where I bring design and functionality together to create captivating digital experiences. Beyond my studies, I indulge in my artistic inclinations as a part-time Photographer and Film Maker, allowing me to capture and share stories through the lens.
+
+          </p>
+    
+          <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+            <a href="https://github.com/unprovidedGL0RY" target="_blank"><img
+              class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+              src="/assets/github.svg"></a>
+              <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/li.svg"></a>
+            <a href="https://www.linkedin.com/in/john-leonard-lea%C3%B1o-033313232/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/ig-icon.png"></a>
+            <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/threads-seeklogo.com-2 (1).svg"></a>
+            <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/fb-icon.png"></a>
+            <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/xffffff.svg"></a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+        <div
+          class="show-modal5 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+          <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/ek.jpg">
+        </div>
+        <div class="pt-4">
+          <h1 class="text-center font-bold text-2xl">Evehn P. Kadusale</h1>
+          <h1 class="text-center font-semibold underline">UI/Graphics Designer</h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal5 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+    
+      <div
+        class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+        <div
+          class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-10 ">
+          <h3 class="font-bold text-2xl text-t-blue tablet:text-6xl desktop:text-8xl">UI/Graphics Designer</h3>
+          <button class="font-extrabold text-t-blue close-modal5 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+        </div>
+        <div
+          class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+          <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/ek.jpg">
+          <p class="mb-4 pb-4 border-b-2 border-t-blue">
+            Holla! Evehn here, currently senior Computer Science student at University of Caloocan City. A designer who approaches
+            UI/Graphic projects with boundless passion and energy. Who also interested in backend development, particularly in
+            security and database management.
+          </p>
+    
+          <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+            <a href="https://github.com/evehnkadusale" target="_blank"><img
+              class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+              src="/assets/github.svg"></a>
+              <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/li.svg"></a>
+            <a href="https://www.linkedin.com/in/evehn-kadusale-134314232/" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/ig-icon.png"></a>
+            <a href="#" target="_blank"><img
+                class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+                src="/assets/images/footer-images/fb-icon.png"></a>
+            </div>
+            </div>
+            </div>
+    </div>
+    
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+    <div
+      class="show-modal6 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/cs.jpg">
+    </div>
+    <div class="pt-4">
+      <h1 class="text-center font-bold text-2xl">Charles T. Sebidos</h1>
+      <h1 class="text-center font-semibold underline">Programmer</h1>
+    </div>
+    </div>
+    </div>
+    <div
+    class="modal6 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+    <div
+    class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+    <div
+      class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-10 ">
+      <h3 class="font-bold text-2xl text-t-blue tablet:text-6xl desktop:text-8xl">Programmer</h3>
+      <button class="font-extrabold text-t-blue close-modal6 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+    </div>
+    <div
+      class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+      <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/cs.jpg">
+      <p class="mb-4 pb-4 border-b-2 border-t-blue">
+        I'm a fourth-year computer science student at University of Caloocan City with a passion for web development. While my skills are average at the moment, I'm determined to broaden my programming expertise and become a versatile coder.
+      </p>
+
+      <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+        <a href="Charles Sebidos
+https://github.com/Chrlss
+" target="_blank"><img
+          class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+          src="/assets/github.svg"></a>
+          <a href="https://www.linkedin.com/in/charles-sebidos-945316232" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/li.svg"></a>
+        <a href="#" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/ig-icon.png"></a>
+        <a href="#" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/threads-seeklogo.com-2 (1).svg"></a>
+        <a href="#" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/fb-icon.png"></a>
+        <a href="#" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/xffffff.svg"></a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="relative p-4 rounded-2xl shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <div class="">
+    <div
+      class="show-modal7 bg-s-blue rounded-2xl flex justify-center overflow-hidden hover:shadow-[rgba(0,_0,_0,_0.50)_0px_5px_10px]">
+      <img class="w-full hover:scale-125 duration-300 ease-in-out" src="/assets/images/developers/rn.jpg">
+    </div>
+    <div class="pt-4">
+      <h1 class="text-center font-bold text-2xl">Rogie C. Nepomuceno jr.</h1>
+      <h1 class="text-center font-semibold underline">Researcher</h1>
+    </div>
+    </div>
+    </div>
+    <div
+    class="modal7 fixed h-full w-full  left-0 top-0 flex justify-center items-center hidden z-20 bg-s-blue  bg-opacity-80">
+    <div
+    class=" rounded shadow-lg w-full h-full px-6 py-10 tablet:px-12 tablet:py-10 tablet:h-full desktop:px-12 desktop:py-10 desktop:h-full overflow-y-scroll">
+    <div
+    class="border-b py-2 pr-2 flex justify-between items-center -mb-4 tablet:py-4 tablet:pr-4 tablet:-mb-6  desktop:pr-8 desktop:-mb-10 ">
+    <h3 class="font-bold text-2xl text-t-blue tablet:text-6xl desktop:text-8xl">Researcher</h3>
+    <button class="font-extrabold text-t-blue close-modal7 text-xl tablet:text-3xl desktop:text-5xl">X</button>
+    </div>
+    <div
+      class="miyerkulet-images bg-s-white font-merriweather border-2 border-t-blue text-xs text-left text-black px-10 py-4 tablet:text-base tablet:px-40 tablet:py-4 desktop:text-xl desktop:px-40 desktop:py-6">
+      <img class="w-full desktop:w-3/4 my-4" src="/assets/images/developers/rn.jpg">
+      <p class="mb-4 pb-4 border-b-2 border-t-blue">
+        Hello there! I'm Rogie Nepomuceno, a dedicated fourth-year Computer Science student at the University of Caloocan City. With a passion for exploring the realms of technology, I've taken on the role of a researcher. My journey involves delving into the intricate world of computer science to unravel new insights and innovative solutions. As I tread the path of academia, I aim to contribute meaningfully to the realm of research, combining my knowledge and curiosity to push the boundaries of what's possible in the digital landscape.
+      </p>
+
+      <div class="w-3/4 rounded-2xl flex justify-center bg-t-blue pl-0 p-2 desktop:p-8">
+        <a href="https://www.linkedin.com/in/rogie-jr-nepomuceno-a577ab236" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/github.svg"></a>
+        <a href="https://www.linkedin.com/in/rogie-jr-nepomuceno-a577ab236/" target="_blank"><img
+            class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/li.svg"></a>
+        <a href="#" target="_blank"><img
+          class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+          src="/assets/images/footer-images/ig-icon.png"></a>
+    <a href="#" target="_blank"><img
+        class="h-4 mx-2 desktop:mx-6 tablet:h-8 tablet:ml-0 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+        src="/assets/images/footer-images/threads-seeklogo.com-2 (1).svg"></a>
+    <a href="#" target="_blank"><img
+        class="h-4 mx-2 desktop:mx-6 tablet:h-8 desktop:h-16 hover:bg-s-blue duration-300 rounded-full"
+        src="/assets/images/footer-images/fb-icon.png"></a>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="/assets/js/script.js"></script>
+  <script>
+    const modal1 = document.querySelector('.modal1');
+
+    const showModal1 = document.querySelector('.show-modal1');
+    const closeModal1 = document.querySelector('.close-modal1');
+
+    showModal1.addEventListener('click', function () {
+      modal1.classList.remove('hidden')
+    });
+
+    closeModal1.addEventListener('click', function () {
+      modal1.classList.add('hidden')
+    });
+  </script>
+  
+  <script>
+    const modal2 = document.querySelector('.modal2');
+
+    const showModal2 = document.querySelector('.show-modal2');
+    const closeModal2 = document.querySelector('.close-modal2');
+
+    showModal2.addEventListener('click', function () {
+      modal2.classList.remove('hidden')
+    });
+
+    closeModal2.addEventListener('click', function () {
+      modal2.classList.add('hidden')
+    });
+  </script>
+  
+  <script>
+    const modal3 = document.querySelector('.modal3');
+
+    const showModal3 = document.querySelector('.show-modal3');
+    const closeModal3 = document.querySelector('.close-modal3');
+
+    showModal3.addEventListener('click', function () {
+      modal3.classList.remove('hidden')
+    });
+
+    closeModal3.addEventListener('click', function () {
+      modal3.classList.add('hidden')
+    });
+  </script>
+  
+  <script>
+    const modal4 = document.querySelector('.modal4');
+
+    const showModal4 = document.querySelector('.show-modal4');
+    const closeModal4 = document.querySelector('.close-modal4');
+
+    showModal4.addEventListener('click', function () {
+      modal4.classList.remove('hidden')
+    });
+
+    closeModal4.addEventListener('click', function () {
+      modal4.classList.add('hidden')
+    });
+  </script>
+  
+  <script>
+    const modal5 = document.querySelector('.modal5');
+
+    const showModal5 = document.querySelector('.show-modal5');
+    const closeModal5 = document.querySelector('.close-modal5');
+
+    showModal5.addEventListener('click', function () {
+      modal5.classList.remove('hidden')
+    });
+
+    closeModal5.addEventListener('click', function () {
+      modal5.classList.add('hidden')
+    });
+  </script>
+  
+  <script>
+    const modal6 = document.querySelector('.modal6');
+
+    const showModal6 = document.querySelector('.show-modal6');
+    const closeModal6 = document.querySelector('.close-modal6');
+
+    showModal6.addEventListener('click', function () {
+      modal6.classList.remove('hidden')
+    });
+
+    closeModal6.addEventListener('click', function () {
+      modal6.classList.add('hidden')
+    });
+  </script>
+  
+  <script>
+    const modal7 = document.querySelector('.modal7');
+
+    const showModal7 = document.querySelector('.show-modal7');
+    const closeModal7 = document.querySelector('.close-modal7');
+
+    showModal7.addEventListener('click', function () {
+      modal7.classList.remove('hidden')
+    });
+
+          closeModal7.addEventListener('click', function () {
+            modal7.classList.add('hidden')
+          });
+        </script>
+</body>
+
+<footer
+  class="flex flex-col justify-between bg-f-1-blue py-2 px-4 tablet:flex-row tablet:py-4 tablet:px-2 desktop:py-4 desktop:px-20">
+  <div class="footer-left-side flex flex-row justify-center phone:mb-4 tablet:flex-col">
+    <a href="/index.html">
+      <img class="w-24 pr-2 tablet:w-44 tablet:p-0 desktop:w-32" src="/assets/images/Intext Icon.svg">
+    </a>
+  </div>
+  <div class="tablet:flex tablet:flex-col tablet:justify-center tablet:items-center">
+    <div class="footer-middle-side tablet:mx-8 desktop:ml-0">
+      
+      <h1
+        class="flex text-f-white text-base font-extrabold justify-center mb-2 tablet:text-sm tablet:bold tablet:justify-start tablet:mb-1 desktop:text-sm">
+        FIND US ON SOCIAL MEDIA! </h1>
+      <div class="flex flex-row justify-center mb-4 tablet:justify-start desktop:mb-4">
+        <a href="https://www.instagram.com/hrpecphils/" target="_blank"><img
+            class="h-8 mx-2 tablet:h-6 tablet:ml-0 desktop:h-8 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/ig-icon.png"></a>
+        <a href="https://www.threads.net/@hrpecphils" target="_blank"><img
+            class="h-8 mx-2 tablet:h-6 desktop:h-8 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/threads-seeklogo.com-2 (1).svg"></a>
+        <a href="https://www.facebook.com/HRPECPhils" target="_blank"><img
+            class="h-8 mx-2 tablet:h-6 desktop:h-8 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/fb-icon.png"></a>
+        <a href="https://twitter.com/HRPECPhils" target="_blank"><img
+            class="h-8 mx-2 tablet:h-6 desktop:h-8 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/xffffff.svg"></a>
+        <a href="https://www.tiktok.com/@hrpecphils?lang=en" target="_blank"><img
+            class="h-8 mx-2 tablet:h-6 desktop:h-8 hover:bg-s-blue duration-300 rounded-full"
+            src="/assets/images/footer-images/tiktok-icon.png"></a>
+      </div>
+      <p class="text-f-white text-center text-xs mb-4 tablet:text-xxs tablet:text-left desktop:text-xs desktop:mb-4">©
+        2023 Human Rights and People Empowerment Center</p>
+      <div
+        class="flex flex-row text-f-white text-xxs justify-center border-t-2 pt-2 mb-4 tablet:justify-start desktop:text-xs">
+        <a class="mr-2 tablet:px-5 desktop:pr-6 duration-300 hover:text-s-blue"
+          href="/assets/developers.html">Developers</a>
+        <a class="mr-2 tablet:px-5 desktop:px-6 duration-300 hover:text-s-blue"
+          href="/assets/copyrights.html">Copyright</a>
+        <a class="mr-2 tablet:px-5 desktop:px-6 duration-300 hover:text-s-blue"
+          href="/assets/privacy-policy.html">Privacy
+          Policy</a>
+        <a class="mr-2 tablet:px-5 desktop:px-6 duration-300 hover:text-s-blue" href="/assets/terms-of-use.html">Terms
+          of
+          Use</a>
+      </div>
+    </div>
+  </div>
+
+
+  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+    class="go-to-top hidden fixed z-50 bottom-10 right-10 border-0 w-14 h-14 rounded-full shadow-md bg-f-blue hover:bg-s-blue text-white text-lg font-semibold transition-colors duration-400">
+    <svg class="go-to-top-arrow h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="17 11 12 6 7 11" />
+      <polyline points="17 18 12 13 7 18" />
+    </svg>
+    <span class="sr-only">Go to top</span>
+  </button>
+
+  <script>
+
+    var toTopButton = document.getElementById("to-top-button");
+
+
+    if (toTopButton) {
+
+
+      window.onscroll = function () {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+          toTopButton.classList.remove("hidden");
+        } else {
+          toTopButton.classList.add("hidden");
+        }
+      };
+
+      window.goToTop = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    }
+  </script>
+  <div
+    class="footer-right-side flex flex-row justify-center text-white text-xs font-bold phone:mb-2 tablet:flex-col tablet:justify-start text-right desktop:font-semibold desktop:text-xs">
+    <div class="flex flex-col px-2">
+      <a class="py-2 border-r-2 border-r-f-1-blue transition-700 pr-2 hover:text-s-blue hover:border-r-2 tablet:hover:border-r-s-blue"
+        href="/assets/about.html">ABOUT US</a>
+      <a class="py-2 border-r-2 border-r-f-1-blue transition-700 pr-2 hover:text-s-blue hover:border-r-2 tablet:hover:border-r-s-blue"
+        href="/assets/about.html#location">LOCATION</a>
+      <a class="py-2 border-r-2 border-r-f-1-blue transition-700 pr-2 hover:text-s-blue hover:border-r-2 tablet:hover:border-r-s-blue"
+        href="/assets/ourwork.html">OUR WORK</a>
+    </div>
+    <div class="flex flex-col px-2">
+      <a class="py-2 border-r-2 border-r-f-1-blue transition-700 pr-2 hover:text-s-blue hover:border-r-2 tablet:hover:border-r-s-blue"
+        href="/assets/contactus.html">CONTACT US</a>
+      <a class="py-2 border-r-2 border-r-f-1-blue transition-700 pr-2 hover:text-s-blue hover:border-r-2 tablet:hover:border-r-s-blue"
+        href="/assets/updates.html">UPDATES</a>
+      <a class="text-base py-0 mt-0 desktop:text-lg desktop:mt-0" href="/assets/donate.html">
+        <button
+          class="bg-s-blue py-2 px-4 desktop:py-2 desktop:px-5 border-2 border-s-blue hover:text-black hover:border-s-blue hover:bg-white hover:border-2 duration-200">
+          DONATE
+        </button>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</html>
